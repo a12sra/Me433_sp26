@@ -88,9 +88,6 @@ int main(void) {
     gpio_pull_up(5);
 
     sleep_ms(100);  
-
-
-
     ssd1306_setup();
 
     mpu6050_check_whoami(i2c0);
