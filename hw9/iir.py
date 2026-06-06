@@ -13,7 +13,7 @@ def iir_filter(signal, A):
     return filtered
 
 files = ['sigA.csv', 'sigB.csv', 'sigC.csv', 'sigD.csv']
-best_A = {'sigA.csv': 0.999, 'sigB.csv': 0.998, 'sigC.csv': 0.5, 'sigD.csv': 0.97}  # tune by eye
+best_A = {'sigA.csv': 0.999, 'sigB.csv': 0.998, 'sigC.csv': 0.5, 'sigD.csv': 0.97}  
 
 fig, axes = plt.subplots(4, 2, figsize=(12, 16))
 

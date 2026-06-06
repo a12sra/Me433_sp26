@@ -4,7 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def get_fft(signal, Fs):
-    """Returns (frequencies, complex FFT values) for a signal."""
     y = np.array(signal)
     n = len(y)
     k = np.arange(n)

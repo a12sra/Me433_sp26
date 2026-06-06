@@ -1,5 +1,5 @@
 from plot import load_csv
-from fft import get_fft          # we need to add this function to fft.py first
+from fft import get_fft   
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -15,7 +15,7 @@ def moving_average(signal, X):
     return filtered
 
 files = ['sigA.csv', 'sigB.csv', 'sigC.csv', 'sigD.csv']
-best_X = {'sigA.csv': 500, 'sigB.csv': 200, 'sigC.csv': 10, 'sigD.csv': 40}  # tune these by eye
+best_X = {'sigA.csv': 500, 'sigB.csv': 200, 'sigC.csv': 10, 'sigD.csv': 40} 
 
 fig, axes = plt.subplots(4, 2, figsize=(12, 16))
 
