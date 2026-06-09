@@ -2,7 +2,7 @@ import serial
 import matplotlib.pyplot as plt
 import numpy as np
 
-PORT     = '/dev/tty.usbmodem1101'   # change port
+PORT     = '/dev/tty.usbmodem1101'   
 BAUD     = 115200
 N        = 400                       
 
@@ -62,8 +62,8 @@ def get_fft(signal, Fs):
 frq_raw,  Y_raw  = get_fft(raw,      Fs)
 frq_filt, Y_filt = get_fft(filtered, Fs)
 
-ax2.plot(frq_raw,  np.abs(Y_raw),  'k', linewidth=0.8, label='raw FFT')
-ax2.plot(frq_filt, np.abs(Y_filt), 'r', linewidth=1.5, label='filtered FFT')
+ax2.semilogy(frq_raw,  np.abs(Y_raw),  'k', linewidth=0.8, label='raw FFT')
+ax2.semilogy(frq_filt, np.abs(Y_filt), 'r', linewidth=1.5, label='filtered FFT')
 ax2.set_xlabel('Frequency (Hz)')
 ax2.set_ylabel('|Y(freq)|')
 ax2.set_title(f'FFT — Nyquist = {Fs/2:.1f} Hz')
